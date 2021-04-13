@@ -42,6 +42,7 @@ namespace cardeck
         /// <returns></returns>
         public Card Deal() 
         {
+            IsEmpty(); //think about this
             Card dealtCard = FullDeck[0];
             Console.WriteLine(dealtCard);
             FullDeck.RemoveAt(0);

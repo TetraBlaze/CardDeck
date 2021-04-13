@@ -10,7 +10,7 @@ namespace cardeck
         public int CardId => _cardId;
         public string Suit => ((_cardId - 1) / 13) switch { 0 => "Hearts", 1 => "Clubs", 2 => "Diamonds", _ => "Spades" };
         public int Value => ((_cardId - 1) % 13) + 1;
-        public string Name
+        public string Name //generated based on card ID
         {
             get
             {

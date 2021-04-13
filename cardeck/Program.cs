@@ -10,6 +10,7 @@ namespace cardeck
             Deck deck = new Deck();
             deck.CreateDeck();
             deck.Shuffle();
+            // displays order of deck post-shuffle, just to prove it works
             foreach (var item in deck.FullDeck)
             {
                 Console.WriteLine($"ID = {item.CardId} name = {item.Name}");
