@@ -42,15 +42,26 @@ namespace cardeck
         /// <returns></returns>
         public Card Deal() 
         {
-            IsEmpty(); //think about this
+            // this is a really stupid way of doing this, but I have to make IsEmpty a method apparently
+            bool empty = IsEmpty();
+            if (empty == true)
+            {
+                Console.WriteLine("No more cards left!");
+                return null;
+            }
+
             Card dealtCard = FullDeck[0];
             Console.WriteLine(dealtCard);
             FullDeck.RemoveAt(0);
             return dealtCard;
         }
+        /// <summary>
+        /// Checks if the deck is empty
+        /// </summary>
+        /// <returns></returns>
         public bool IsEmpty() //idk what i'm meant to do with this
         {
-            return FullDeck.Count == 0; //TODO: implement IsEmpty... somehow
+            return FullDeck.Count == 0; 
         }
     }
 }
