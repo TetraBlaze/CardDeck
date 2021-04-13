@@ -10,6 +10,9 @@ namespace cardeck
 
         public IList<Card> FullDeck { get; private set; } = new List<Card>(52);
        
+        /// <summary>
+        /// Creates a full list of unique cards
+        /// </summary>
         public void CreateDeck()
         {
             for (int i = 1; i <= 52; i++)
